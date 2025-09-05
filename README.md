@@ -86,9 +86,13 @@ lib/
   *  [x] Name (e.g., Bitcoin)
   *  [x] Symbol (e.g., BTC)
   *  [x] Current Price in USD (e.g., $6545)
-* [ ] (Extra challenge) Include these elements to the list item as well:
+* [x] (Extra challenge) Include these elements to the list item as well:
   *  [ ] Rank of the cryptocurrency (e.g. #1)
-  *  [ ] Percentage change in the last 7 days (e.g. -1.07%)
+  *  [x] Percentage change in the last 7 days (e.g. -1.07%)
+
+* [x] Sort data by:
+  * [x] Alphabet
+  * [x] Rank
 ---
 
 ## ⚙️ Installation & Setup

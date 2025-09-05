@@ -6,8 +6,8 @@ class ApiRepository {
 
   ApiRepository(this.apiService);
 
-  Future<TickersModel> getTickers() async {
-    final result = await apiService.fetchTickers();
+  Future<TickersModel> getTickers({required int start}) async {
+    final result = await apiService.fetchTickers(start: start);
     return result;
   }
 }

@@ -1,3 +1,4 @@
+import 'package:crypto_currency_price/features/crypto_currency/providers/ticker_notifier.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '/core/network/dio_client.dart';
@@ -19,6 +20,9 @@ final apiRepositoryProvider = Provider<ApiRepository>(
 );
 
 // Tickers provider
-final tickersProvider = FutureProvider<TickersModel>(
-  (ref) async => await ref.watch(apiRepositoryProvider).getTickers(),
-);
+final tickersProvider =
+    StateNotifierProvider<TickersNotifier, AsyncValue<List<Data?>>>(
+      (
+        ref,
+      ) => TickersNotifier(ref.watch(apiRepositoryProvider)),
+    );
