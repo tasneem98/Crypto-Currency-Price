@@ -67,11 +67,11 @@ lib/
 │       │   ├── api_repository.dart
 │       │   ├── api_service.dart
 │       │   └── models/
-│       │       └── tickers.dart
+│       │       └── tickers_model.dart
 │       ├── presentation/
-│       │   └── home_page.dart
+│       │   └── ticker_page.dart
 │       └── providers/
-│           ├── __provider.dart
+│           ├── tickers_provider.dart
 │           └── __provider.dart
 │
 ├── widgets/
@@ -82,13 +82,17 @@ lib/
 ---
 
 ## 🟦 Requirements
-* [ ] Display a list of cryptocurrencies on the home screen:
-  *  [ ] Name (e.g., Bitcoin)
-  *  [ ] Symbol (e.g., BTC)
-  *  [ ] Current Price in USD (e.g., $6545)
-* [ ] (Extra challenge) Include these elements to the list item as well:
+* [x] Display a list of cryptocurrencies on the home screen:
+  *  [x] Name (e.g., Bitcoin)
+  *  [x] Symbol (e.g., BTC)
+  *  [x] Current Price in USD (e.g., $6545)
+* [x] (Extra challenge) Include these elements to the list item as well:
   *  [ ] Rank of the cryptocurrency (e.g. #1)
-  *  [ ] Percentage change in the last 7 days (e.g. -1.07%)
+  *  [x] Percentage change in the last 7 days (e.g. -1.07%)
+
+* [x] Sort data by:
+  * [x] Alphabet
+  * [x] Rank
 ---
 
 ## ⚙️ Installation & Setup
