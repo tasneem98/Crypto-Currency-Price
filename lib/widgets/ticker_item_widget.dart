@@ -52,7 +52,7 @@ class TickerItem extends StatelessWidget {
                             fontSize: 16,
                           ),
                         ),
-                        Text('${ticker.symbol}'),
+                        Text('${ticker.symbol} ( #${ticker.rank} )'),
                       ],
                     ),
                   ),
