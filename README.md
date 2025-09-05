@@ -17,10 +17,10 @@ This project is a Flutter app that displays a list of cryptocurrencies with thei
 ---
 
 ## 📸 Screenshots & Demo
-[//]: # (ToDo: ==> Add Screenshots)
+ 
+<img src="assets/screenshot_main_screen.png" alt="App Main Screen" width="200"/>
+<img src="assets/screenshot_sort.png" alt="App Feature - Sort" width="200"/>
 
-<img src="assets/screenshot_.png" alt="App Main Screen" width="200"/>
-<img src="assets/screenshot_feature_x.png" alt="App Feature X" width="200"/>
 ---
 
 ## 🛠️ Tech Stack
