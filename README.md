@@ -8,55 +8,45 @@ This project is a Flutter app that displays a list of cryptocurrencies with thei
 ---
 
 ## 🚀 Features
-[//]: # (ToDo: ==> Add Features)
-[//]: # (-   **Random Palette Generation**)
-
-[//]: # (-   **Color Display:** Colors are presented in individual cards.)
-
-[//]: # (-   **Hex Code Visibility:** Each color card displays its corresponding hexadecimal value.)
-
-[//]: # (-   **Responsive Grid Layout:** Colors are displayed in a grid that adapts to screen space &#40;currently 2 columns&#41;.)
-
-[//]: # (-   **Notification System:**)
-
-[//]: # (    *   Requests user permission to display notifications.)
-
-[//]: # (    *   Handles cases where notification permission is denied or permanently denied by prompting the user to open app settings.)
-
-[//]: # (    *   Displays a notification &#40;e.g., when a color's HEX code is copied&#41;)
-
-[//]: # (-   **Shake Detection:** Shake the device to generate a new palette.)
-
+- **Cryptocurrency List:** Displays a list of cryptocurrencies with key details.
+- **Details Shown:** Name, symbol, current price in USD, rank, and 7-day percentage change.
+- **Sorting:** Sort cryptocurrencies by alphabet or rank.
+- **Long Tap Info:** Long tap on a cryptocurrency to view its full ticker name.
+- **Clean UI:** Simple and clean user interface for easy browsing.
+- **API Integration:** Fetches real-time data from the Coinlore API.
 ---
 
 ## 📸 Screenshots & Demo
-[//]: # (ToDo: ==> Add Screenshots)
+ 
+<img src="assets/screenshot_main_screen.png" alt="App Main Screen" width="200"/>
+<img src="assets/screenshot_sort.png" alt="App Feature - Sort" width="200"/>
 
-<img src="assets/screenshot_.png" alt="App Main Screen" width="200"/>
-<img src="assets/screenshot_feature_x.png" alt="App Feature X" width="200"/>
 ---
 
 ## 🛠️ Tech Stack
 Built with **Flutter** (using the Dart programming language).
-- **Key Packages**:
 
-[//]:# (ToDo: ==> Add Key Packages)
-[//]: # (    - `flutter_local_notifications`: For displaying local notifications.)
-[//]: # (    - `permission_handler`: For checking and requesting permissions, and guiding users to app settings.)
-[//]: # (    - `shake`: For detect phone shakes.)
+**Key Packages**:
+
+- **Dio:** Powerful HTTP client for Dart, used for API requests.
+- **Riverpod:** State management solution for managing app state.
+- **intl:** For internationalization and formatting numbers/currencies.
+- **Coinlore API:** Source of real-time cryptocurrency data.
 ---
 
 ## 📂 Project Structure 
 
-[//]: # (ToDo: ==> Add Project Structure)
 ```
 lib/
 │
 ├── core/
+│   ├── extensions/
+│   │   ├── intl_extension.dart
+│   │   └── percent_change_extension.dart
 │   ├── network/
 │   │   ├── api_exceptions.dart
 │   │   └── dio_client.dart
-│   ├── themes/
+│   ├── theme/
 │   │   └── app_theme.dart
 │   └── utils/
 │       └── constants.dart
@@ -69,15 +59,14 @@ lib/
 │       │   └── models/
 │       │       └── tickers_model.dart
 │       ├── presentation/
-│       │   └── ticker_page.dart
+│       │   └── tickers_page.dart
 │       └── providers/
-│           ├── tickers_provider.dart
-│           └── __provider.dart
+│           ├── ticker_notifier.dart
+│           └── tickers_provider.dart
 │
 ├── widgets/
-│   └── __.dart
-│
-└── main.dart
+│   ├── percent_change_widget.dart
+│   └── ticker_item_widget.dart
 ```
 ---
 
@@ -87,7 +76,7 @@ lib/
   *  [x] Symbol (e.g., BTC)
   *  [x] Current Price in USD (e.g., $6545)
 * [x] (Extra challenge) Include these elements to the list item as well:
-  *  [ ] Rank of the cryptocurrency (e.g. #1)
+  *  [x] Rank of the cryptocurrency (e.g. #1)
   *  [x] Percentage change in the last 7 days (e.g. -1.07%)
 
 * [x] Sort data by:
@@ -133,10 +122,11 @@ flutter run
 ```
 ---
 
-[//]: # (ToDo: ==> Add Description)
 ## 📖 Usage 
 1. Launch the app
-2. 
+2. The home screen will display a list of cryptocurrencies with their name, symbol, price, rank, and 7-day percentage change.
+3. Long tap on a cryptocurrency to view its full ticker name.
+4. Use the sort options to organize the list by alphabet or rank.
 ---
 
 ## 🤝Contributing
