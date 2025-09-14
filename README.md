@@ -67,6 +67,8 @@ lib/
 ├── widgets/
 │   ├── percent_change_widget.dart
 │   └── ticker_item_widget.dart
+│
+└── main.dart
 ```
 ---
 
